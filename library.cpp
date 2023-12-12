@@ -5,8 +5,8 @@
 
 using namespace std;
 
-// Define a Book structure
-struct Book {
+// Book structure
+struct Book{
     string title;
     string author;
     float price;
@@ -20,7 +20,7 @@ void searchByTitle(vector<Book>& books, vector<Book>& cart, const string& query)
 void searchByAuthor(vector<Book>& books, vector<Book>& cart, const string& query);
 void checkout(vector<Book>& cart);
 
-// Function to display the main menu
+// Function main menu
 void displayMenu() {
     cout << "Welcome to the online bookstore, what would you like to do today? \n";
     cout << "1. Display Books\n";
@@ -33,7 +33,7 @@ void displayMenu() {
     cout << "Enter your choice: ";
 }
 
-// Function to display a list of books
+// Function list of books
 void displayBooks(const vector<Book>& books) {
     cout << "Available Books:\n";
     for (const Book& book : books) {
@@ -42,7 +42,7 @@ void displayBooks(const vector<Book>& books) {
     cout << endl;
 }
 
-// Function to search for a book by title and add matching books to the cart
+//  search for a book by title 
 void searchByTitle(vector<Book>& books, vector<Book>& cart, const string& query) {
     string lowerCaseQuery = query;
     transform(lowerCaseQuery.begin(), lowerCaseQuery.end(), lowerCaseQuery.begin(), ::tolower);
